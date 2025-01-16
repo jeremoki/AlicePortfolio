@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a;
@@ -10,6 +11,7 @@ body {
     display: flex;
 }
 
+/* Sidebar styles */
 .sidebar {
     background-color: #0b0b0b;
     padding: 20px;
@@ -71,6 +73,7 @@ body {
     color: #fff;
 }
 
+/* Main Content */
 main {
     margin-left: 300px; /* Pushes the main content to the right */
     padding: 20px;
@@ -78,16 +81,37 @@ main {
     overflow-y: auto; /* Ensures content is scrollable if it overflows */
 }
 
+
+
+
+
+
+/* Section Headers */
 h3 {
     color: #00ff00;
     margin-bottom: 20px;
     text-align: center;
 }
 
-section {
-    margin-bottom: 40px;
+/* Styling for paragraphs 
+#about p {
+    line-height: 1.6;
+}*/
+
+/* Skills List Styling 
+#about ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
+#about ul li {
+    background-color: #111;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-left: 5px solid #00ff00;
+}*/
+
+/* Project Gallery */
 .project-gallery {
     display: flex;
     gap: 20px;
@@ -104,6 +128,7 @@ section {
     border: 2px solid #00ff00;
 }
 
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -143,13 +168,38 @@ form button:hover {
     color: #fff;
 }
 
-
 /* Center-align text within sections */
 section#about p, section#experience p, section#skills ul {
     text-align: left;
 }
+/* ... (previous CSS remains unchanged) ... */
 
-form button:hover {
-    background-color: #0a0;
-    color: #fff;
+#about {
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    align-items: left;
+    justify-content: flex-start;
+    max-width: 1000px;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* Added gap between image and text */
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+    margin-left: 0%;
+}
+
+.about-image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    padding-top: 2px;
 }

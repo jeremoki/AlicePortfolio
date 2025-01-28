@@ -121,6 +121,7 @@ h3 {
 .project {
     flex: 1;
     min-width: 300px;
+    
 }
 
 .project video {
@@ -172,7 +173,7 @@ form button:hover {
 section#about p, section#experience p, section#skills ul {
     text-align: left;
 }
-/* ... (previous CSS remains unchanged) ... */
+
 
 #about {
     display: flex;

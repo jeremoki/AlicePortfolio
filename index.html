@@ -21,10 +21,14 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <a href="./resume/Alice_Jeremoki_Resume (updated4).pdf" download class="btn">Download Resume</a>
                 </ul>
-                <a href="./resume/Alice_Jeremoki_Resume (updated4).pdf" download class="btn">Download Resume</a>
+                
             </div>
+            <button class="hamburger" onclick="toggleSidebar()">☰</button>
         </aside>
+        
+
 
         <!-- Main Content -->
         <main>
@@ -147,5 +151,14 @@
             </section>
         </main>
     </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('main');
+            sidebar.classList.toggle('hidden');
+            mainContent.classList.toggle('sidebar-hidden');
+        }
+    </script>
 </body>
 </html>
+

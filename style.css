@@ -14,8 +14,8 @@ body {
 /* Sidebar styles */
 .sidebar {
     background-color: #0b0b0b;
-    padding: 20px;
-    width: 250px;
+    padding: 10px;
+    width: 20px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -57,7 +57,7 @@ body {
 
 .sidebar .btn {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 40px;
     background-color: #00ff00;
     color: #000;
     text-align: center;
@@ -136,6 +136,7 @@ form {
     gap: 15px;
     max-width: 500px;
     width: 100%;
+    
 }
 
 form input, form textarea {
@@ -145,7 +146,7 @@ form input, form textarea {
     border-radius: 5px;
     background-color: #111;
     color: #0f0;
-    width: 100%;
+    width: 90%;
 }
 
 form input::placeholder, form textarea::placeholder {
@@ -256,3 +257,70 @@ section#about p, section#experience p, section#skills ul {
         min-width: 100%; /* Stack project items */
     }
 }
+/* Default Sidebar - Desktop View */
+.sidebar {
+    background-color: #0b0b0b;
+    padding: 20px;
+    width: 228px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+/* Adjusting the responsiveness*/
+/* Sidebar Hidden - For Mobile */
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+/* Main Content Adjust */
+main {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Main Content Adjust when Sidebar is Hidden */
+main.sidebar-hidden {
+    margin-left: 0;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background-color: #00ff00;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.5em;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        transform: translateX(-100%);
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+/* sidebar behaviour*/

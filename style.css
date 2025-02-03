@@ -204,3 +204,55 @@ section#about p, section#experience p, section#skills ul {
     border-radius: 10px;
     padding-top: 2px;
 }
+/* responsive ness /*
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Adjust sidebar and main layout for tablets */
+    .sidebar {
+        width: 200px; /* Reduce sidebar width */
+    }
+    main {
+        margin-left: 220px; /* Adjust main content margin */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack sidebar and main content for smaller screens */
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    main {
+        margin-left: 0;
+    }
+
+    /* Stack About section items vertically */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-image {
+        width: 100%; /* Make image full width */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Fine-tune for mobile phones */
+    .sidebar ul li a {
+        font-size: 14px; /* Reduce font size */
+    }
+    .sidebar h1, .sidebar h2 {
+        font-size: 1.5em; /* Adjust heading size */
+    }
+    form {
+        max-width: 100%; /* Make form full width */
+    }
+    .project {
+        min-width: 100%; /* Stack project items */
+    }
+}
